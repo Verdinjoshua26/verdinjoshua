@@ -21,7 +21,9 @@
     "test:lint:lockfile": "lockfile-lint --allowed-hosts npm github.com --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
     "test:lint": "npm-run-all --parallel test:lint:*",
     "test:html": "node scripts/vnu-jar.js",
-    "test:unit": "tape tests/**/*.test.js | faucet"
+    "test:unit": "tape tests/**/*.test.js | faucet",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": "nodejs/nodejs.org",
   "author": "Node.js Website Working Group",
@@ -40,12 +42,12 @@
     "autoprefixer": "^9.8.4",
     "cheerio": "^0.22.0",
     "fibers": "^5.0.0",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "jstransformer-handlebars": "^1.1.0",
     "junk": "^3.1.0",
     "lodash.defaultsdeep": "^4.6.1",
-    "marked": "^1.1.0",
-    "metalsmith": "^2.3.0",
+    "marked": "^4.0.10",
+    "metalsmith": "^2.5.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-discover-helpers": "^0.1.1",
     "metalsmith-discover-partials": "^0.1.2",
@@ -59,10 +61,11 @@
     "ncp": "^2.0.0",
     "node-version-data": "^1.1.0",
     "npm-run-all": "^4.1.5",
-    "postcss": "^7.0.32",
+    "postcss": "^7.0.36",
     "sass": "^1.26.9",
     "semver": "^7.3.2",
-    "strftime": "^0.10.0"
+    "strftime": "^0.10.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "chokidar": "^3.4.0",
@@ -83,5 +86,6 @@
     "stylelint-config-twbs-bootstrap": "^2.0.3",
     "tape": "^5.0.1",
     "vnu-jar": "20.5.29"
-  }
+  },
+  "snyk": true
 }
