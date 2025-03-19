@@ -54,7 +54,7 @@
     "metalsmith-markdown": "^1.3.0",
     "metalsmith-metadata": "0.0.4",
     "metalsmith-permalinks": "^2.2.0",
-    "metalsmith-prism": "^3.1.1",
+    "metalsmith-prism": "^5.0.2",
     "metalsmith-yearly-pagination": "^4.0.1",
     "ncp": "^2.0.0",
     "node-version-data": "^1.1.0",
